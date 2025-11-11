@@ -1,0 +1,7 @@
+[package]
+name = "fenster-ipc"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+serde = { workspace = true, features = ["std", "derive"] }
