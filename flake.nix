@@ -52,7 +52,7 @@
       craneLib = crane.mkLib pkgs;
     in {
       default = craneLib.devShell {
-        buildInputs = with self.packages.${system}; (fenster.buildInputs ++ fenster-daemon.buildInputs);
+        inputsFrom = builtins.attrValues self.packages.${system};
       };
     });
 
